@@ -120,6 +120,8 @@ function loadPC(flipbook,pageNum){
 
 			pages: pageNum,
 
+			direction: "rtl",
+
 			// Events
 
 			when: {
@@ -215,6 +217,8 @@ function loadPhone(flipbook,pageNum){
 			// The number of pages
 
 			pages: pageNum,
+
+			direction: "rtl",
 
 			// Events
 
@@ -517,7 +521,7 @@ function loadApp() {
 
 	}).click(function() {
 		
-		$('.magazine').turn('next');
+		$('.magazine').turn('previous');
 
 	});
 
@@ -541,9 +545,11 @@ function loadApp() {
 
 	}).click(function() {
 		
-		$('.magazine').turn('previous');
+		$('.magazine').turn('next');
 
 	});
+
+	//$(".previous-button").css("display", "block")
 
 
 	resizeViewport();

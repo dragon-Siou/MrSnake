@@ -206,14 +206,14 @@ function isChrome() {
 
 function disableControls(page) {
 		if (page==1)
-			$('.previous-button').hide();
-		else
-			$('.previous-button').show();
-					
-		if (page==$('.magazine').turn('pages'))
 			$('.next-button').hide();
 		else
 			$('.next-button').show();
+					
+		if (page==$('.magazine').turn('pages'))
+			$('.previous-button').hide();
+		else
+			$('.previous-button').show();
 }
 
 // Set the width and height for the viewport
