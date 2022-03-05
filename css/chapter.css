@@ -1,0 +1,59 @@
+
+.chapter-button-box{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+
+    left: -60%;
+    top: -20%;
+
+}
+
+.chapter-button-head{
+    position: absolute;
+    
+    top: 0%;
+    left: -95%;
+}
+
+.chapter-button-0{
+    position: absolute;
+    
+    top: 10%;
+    left: -95%;
+}
+
+.chapter-button-1{
+    position: absolute;
+    
+    top: 20%;
+    left: -95%;
+}
+
+.chapter-button-2{
+    position: absolute;
+    
+    top: 30%;
+    left: -95%;
+}
+
+.chapter-button-3{
+    position: absolute;
+    
+    top: 40%;
+    left: -95%;
+}
+
+.chapter-button-4{
+    position: absolute;
+    
+    top: 50%;
+    left: -95%;
+}
+
+.chapter-button-5{
+    position: absolute;
+    
+    top: 60%;
+    left: -95%;
+}
