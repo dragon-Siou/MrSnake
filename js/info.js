@@ -20,34 +20,32 @@ $(function(){
     .click(closeInfo)
 
     //一開始隱藏所有的東東
-    $(".info-img-fb")
-    .css("display", "none")
-
-    $(".info-img-twitter")
-    .css("display", "none")
-
-    $(".info-img-close")
-    .css("display", "none")
+    $(".info-box").css("display", "none")
 })
 
 
 function openInfo(){    
 
     //關掉自己
-    $(".info-img-head").css("display", "none")
+    $(".info-box-head").css("display", "none")
 
 
-    $(".info-img-fb").css("display", "block")
-    $(".info-img-twitter").css("display", "block")
-    $(".info-img-close").css("display", "block")
+    $(".info-box").css("display", "block")
    
 }
 
 function closeInfo(){
-    $(".info-img-head").css("display", "block")
+    $(".info-box-head").css("display", "block")
 
-    $(".info-img-fb").css("display", "none")
-    $(".info-img-twitter").css("display", "none")
-    $(".info-img-close").css("display", "none")
+    $(".info-box").css("display", "none")
    
+}
+
+function openAllInfo(){
+    closeInfo()
+}
+
+function closeAllInfo(){
+    $(".info-box-head").css("display", "none")
+    $(".info-box").css("display", "none")
 }

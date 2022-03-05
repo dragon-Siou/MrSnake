@@ -34,18 +34,23 @@
 			<div ignore="1" class="previous-button"></div>
 		</div>
 
-		<img class="info-img info-img-head" src="./pics/snake.jpg" />
+		<div class="info-box-head">
+			<img class="info-img info-img-head" src="./pics/snake.jpg" />
+		</div>
+		
 
-		<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
-			<img class="info-img info-img-fb" src="./pics/fb.png" />
-		</a>
-		<a href="https://twitter.com/johnny4478" target="_blank">
-			<img class="info-img info-img-twitter" src="./pics/twitter.png" />
-		</a>
+		<div class="info-box">
+			<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
+				<img class="info-img info-img-fb" src="./pics/fb.png" />
+			</a>
+			<a href="https://twitter.com/johnny4478" target="_blank">
+				<img class="info-img info-img-twitter" src="./pics/twitter.png" />
+			</a>
 
-		<img class="info-img info-img-close" src="./pics/snake.jpg" />
+			<img class="info-img info-img-close" src="./pics/snake.jpg" />
+		</div>
 
-		<div class="chapter-button-box">
+		<div class="chapter-box">
 			<button class="chapter-button-head">首頁</button>
 			<button class="chapter-button-0">第零章</button>
 			<button class="chapter-button-1">第一章</button>
@@ -613,10 +618,19 @@ function loadApp() {
 
  }).bind('click', function() {
 
- 	if ($(this).hasClass('zoom-icon-in'))
- 		$('.magazine-viewport').zoom('zoomIn');
- 	else if ($(this).hasClass('zoom-icon-out'))	
+ 	if ($(this).hasClass('zoom-icon-in')){
+
+		closeAllInfo();
+		closeAllChapter();
+		$('.magazine-viewport').zoom('zoomIn');
+	}
+ 		
+ 	else if ($(this).hasClass('zoom-icon-out'))	{
+		openAllChapter();
+		openAllInfo();
 		$('.magazine-viewport').zoom('zoomOut');
+	}
+		
 
  });
 

@@ -1,4 +1,22 @@
 
+.info-box-head{
+    position: absolute;
+    width: 100px;
+    height: 600px;
+
+    top: -15%;
+    left: 80%;
+}
+
+.info-box{
+    position: absolute;
+    width: 100px;
+    height: 600px;
+
+    top: -15%;
+    left: 80%;
+}
+
 .info-img-head{
     position: absolute;
     top: 50%;

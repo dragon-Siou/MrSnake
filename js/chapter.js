@@ -22,3 +22,11 @@ $(function(){
         $('.magazine').turn("page",113)
     })
 })
+
+function openAllChapter(){
+    $(".chapter-box").css("display", "block")
+}
+
+function closeAllChapter(){
+    $(".chapter-box").css("display", "none")
+}

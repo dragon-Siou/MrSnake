@@ -63,8 +63,12 @@ function zoomTo(event) {
 				$('.magazine-viewport').data().regionClicked = false;
 			} else {
 				if ($('.magazine-viewport').zoom('value')==1) {
+					closeAllInfo();
+					closeAllChapter();
 					$('.magazine-viewport').zoom('zoomIn', event);
 				} else {
+					openAllChapter();
+					openAllInfo();
 					$('.magazine-viewport').zoom('zoomOut');
 				}
 			}
