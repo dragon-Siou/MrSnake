@@ -9,14 +9,14 @@ body{
 	position:absolute;
 	top:50%;
 	left:50%;
-	width:660px;
-	height:460px;
+	width:789px;
+	height:550px;
 	margin:auto;
 }
 
 .magazine-viewport .magazine{
-	width:660px;
-	height:460px;
+	width:789px;
+	height:550px;
 	left:-461px;
 	top:-300px;
 }

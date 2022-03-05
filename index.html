@@ -59,6 +59,9 @@
 
 <script type="text/javascript">
 
+
+let pagePath = 'pages/';
+
 function check() {
 
 	let userAgentInfo=navigator.userAgent;
@@ -301,10 +304,12 @@ function loadApp() {
 	//判斷是電腦還是手機
 	//電腦
 	if(check()){
+		
 		loadPC(flipbook,pageNum);
 	}
 	//手機
 	else{
+
 		loadPhone(flipbook,pageNum);
 	}
 
