@@ -14,20 +14,38 @@
 
 </head>
 <body>
+<div class="info-box">
+	
+</div>
 
 <div id="canvas">
 
 <div class="zoom-icon zoom-icon-in"></div>
 
+
 <div class="magazine-viewport">
 	<div class="container">
 		
+
 		<div class="magazine">
 			<!-- Next button -->
 			<div ignore="1" class="next-button"></div>
 			<!-- Previous button -->
 			<div ignore="1" class="previous-button"></div>
 		</div>
+
+		<img class="info-img info-img-head" src="./pics/snake.jpg" />
+
+		<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
+			<img class="info-img info-img-fb" src="./pics/fb.png" />
+		</a>
+		<a href="https://twitter.com/johnny4478" target="_blank">
+			<img class="info-img info-img-twitter" src="./pics/twitter.png" />
+		</a>
+
+		<img class="info-img info-img-close" src="./pics/snake.jpg" />
+
+
 	</div>
 </div>
 
@@ -289,6 +307,8 @@ function loadPhone(flipbook,pageNum){
 
 function loadApp() {
 
+
+	
  	$('#canvas').fadeIn(1000);
 
  	var flipbook = $('.magazine');
@@ -601,7 +621,7 @@ yepnope({
 	test : Modernizr.csstransforms,
 	yep: ['lib/turn.js'],
 	nope: ['lib/turn.html4.min.js'],
-	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css'],
+	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'css/info.css', 'js/info.js'],
 	complete: loadApp
 });
 

@@ -1,0 +1,42 @@
+.info-box{
+    position: relative;
+}
+
+.info-img-head{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+}
+
+.info-img-fb{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+}
+
+.info-img-twitter{
+    position: absolute;
+    top: 25%;
+    left: 95%;
+}
+
+.info-img-close{
+    position: absolute;
+    top: 0%;
+    left: 95%;
+}
+
+.info-img{
+    
+    border-radius: 50%;
+
+    width: 70px;
+    height: 70px;
+
+    
+    
+}
+
+.info-img-hover{
+    filter:brightness(70%);
+}
