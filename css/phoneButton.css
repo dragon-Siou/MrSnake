@@ -1,0 +1,28 @@
+.phone-button-box{
+    position: absolute;
+    width: 800px;
+    height: 100px;
+
+    left: -62%;
+    top: 175%;
+}
+
+.phone-button-next{
+    position: absolute;
+
+    width: 150px;
+    height: 75px;
+
+    font-size: 36px;
+}
+
+.phone-button-previous{
+    position: absolute;
+
+    width: 150px;
+    height: 75px;
+
+    left: 80%;
+
+    font-size: 36px;
+}

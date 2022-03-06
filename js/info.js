@@ -20,24 +20,24 @@ $(function(){
     .click(closeInfo)
 
     //一開始隱藏所有的東東
-    $(".info-box").css("display", "none")
+    $("#info-link").css("display", "none")
 })
 
 
 function openInfo(){    
 
     //關掉自己
-    $(".info-box-head").css("display", "none")
+    $("#info-head").css("display", "none")
 
 
-    $(".info-box").css("display", "block")
+    $("#info-link").css("display", "block")
    
 }
 
 function closeInfo(){
-    $(".info-box-head").css("display", "block")
+    $("#info-head").css("display", "block")
 
-    $(".info-box").css("display", "none")
+    $("#info-link").css("display", "none")
    
 }
 
@@ -46,6 +46,13 @@ function openAllInfo(){
 }
 
 function closeAllInfo(){
-    $(".info-box-head").css("display", "none")
-    $(".info-box").css("display", "none")
+    $("#info-head").css("display", "none")
+    $("#info-link").css("display", "none")
+}
+
+function setInfoPhone(){
+    $(".info-box").removeClass("info-box").addClass("phone-info-box")
+    $(".info-img-fb").removeClass("info-img-fb").addClass("phone-info-img-fb")
+    $(".info-img-twitter").removeClass("info-img-twitter").addClass("phone-info-img-twitter")
+
 }

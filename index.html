@@ -34,12 +34,12 @@
 			<div ignore="1" class="previous-button"></div>
 		</div>
 
-		<div class="info-box-head">
+		<div id="info-head" class="info-box">
 			<img class="info-img info-img-head" src="./pics/snake.jpg" />
 		</div>
 		
 
-		<div class="info-box">
+		<div id="info-link" class="info-box">
 			<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
 				<img class="info-img info-img-fb" src="./pics/fb.png" />
 			</a>
@@ -58,6 +58,11 @@
 			<button class="chapter-button-3">第三章</button>
 			<button class="chapter-button-4">第四章</button>
 			<button class="chapter-button-5">第五章</button>
+		</div>
+
+		<div class="phone-button-box">
+			<button class="phone-button-next">下一頁</button>
+			<button class="phone-button-previous">上一頁</button>
 		</div>
 	</div>
 </div>
@@ -214,6 +219,55 @@ function loadPC(flipbook,pageNum){
 	$(".next-button").addClass("button-pc");
 	$(".previous-button").addClass("button-pc");
 
+	//刷條設定
+		// Events for the next button
+
+		$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
 }
 
 function loadPhone(flipbook,pageNum){
@@ -315,6 +369,12 @@ function loadPhone(flipbook,pageNum){
 	$(".previous-button").addClass("button-phone");
 
 	$('.magazine').css('overflow', 'visible');
+
+	//關閉刷條
+	$(".next-button").css("display","none")
+	$(".previous-button").css("display","none")
+
+	setInfoPhone();
 
 }
 
@@ -430,7 +490,7 @@ function loadApp() {
 
 	$(document).keydown(function(e){
 
-		var previous = 37, next = 39, esc = 27;
+		var previous = 39, next = 37, esc = 27;
 
 		switch (e.keyCode) {
 			case previous:
@@ -540,53 +600,9 @@ function loadApp() {
 		$('.magazine').click(regionClick);
 	}
 
-	// Events for the next button
+	//只有PC有，移到PC
 
-	$('.next-button').bind($.mouseEvents.over, function() {
-		
-		$(this).addClass('next-button-hover');
 
-	}).bind($.mouseEvents.out, function() {
-
-		$(this).removeClass('next-button-hover');
-
-	}).bind($.mouseEvents.down, function() {
-
-		$(this).addClass('next-button-down');
-
-	}).bind($.mouseEvents.up, function() {
-		
-		$(this).removeClass('next-button-down');
-
-	}).click(function() {
-		
-		$('.magazine').turn('previous');
-
-	});
-
-	// Events for the next button
-	
-	$('.previous-button').bind($.mouseEvents.over, function() {
-		
-		$(this).addClass('previous-button-hover');
-
-	}).bind($.mouseEvents.out, function() {
-		
-		$(this).removeClass('previous-button-hover');
-
-	}).bind($.mouseEvents.down, function() {
-		
-		$(this).addClass('previous-button-down');
-
-	}).bind($.mouseEvents.up, function() {
-		
-		$(this).removeClass('previous-button-down');
-
-	}).click(function() {
-		
-		$('.magazine').turn('next');
-
-	});
 
 	//$(".previous-button").css("display", "block")
 
@@ -620,14 +636,12 @@ function loadApp() {
 
  	if ($(this).hasClass('zoom-icon-in')){
 
-		closeAllInfo();
-		closeAllChapter();
+		closeUI();
 		$('.magazine-viewport').zoom('zoomIn');
 	}
  		
  	else if ($(this).hasClass('zoom-icon-out'))	{
-		openAllChapter();
-		openAllInfo();
+		openUI();
 		$('.magazine-viewport').zoom('zoomOut');
 	}
 		
@@ -644,9 +658,21 @@ yepnope({
 	yep: ['lib/turn.js'],
 	nope: ['lib/turn.html4.min.js'],
 	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'css/info.css', 'js/info.js'
-		,'js/chapter.js' , 'css/chapter.css'],
+		,'js/chapter.js' , 'css/chapter.css', 'js/phoneButton.js', 'css/phoneButton.css'],
 	complete: loadApp
 });
+
+function openUI(){
+	openAllChapter();
+	openAllInfo();
+	openPhoneButton();
+}
+
+function closeUI(){
+	closeAllInfo();
+	closeAllChapter();
+	closePhoneButton()
+}
 
 </script>
 
