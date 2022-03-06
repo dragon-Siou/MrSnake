@@ -682,16 +682,19 @@ function closeUI(){
 
 <script type="application/javascript">
 	//IP資訊
+
+
 	function getIP(json) {
 		//alert("My public IP address is: " + json.ip);
 
 
 		$.ajax({
-			url: "https://script.google.com/macros/s/AKfycbyWxbfQMa4WiTATUCkABOl-ALYtPvvOluf6o-vto9b5HAnKHw_hVNcHddFHdco4V8vC/exec",
+			url: "https://script.google.com/macros/s/AKfycbxG1_BbCCcdjWVEon7yxsvL2_KnTL9uw9Dy8ROELebV88wGR2ldePiAtI5UJ9z1AG7R/exec",
 			
 			
 			data: {
 				ip: json.ip
+				,device: navigator.userAgent
 			},
 			/*
 			success: function(response) {
