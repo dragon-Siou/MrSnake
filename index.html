@@ -41,10 +41,10 @@
 
 		<div id="info-link" class="info-box">
 			<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
-				<img class="info-img info-img-fb" src="./pics/fb.png" />
+				<img class="info-img info-img-fb" style="display: none;" src="./pics/fb.png" />
 			</a>
 			<a href="https://twitter.com/johnny4478" target="_blank">
-				<img class="info-img info-img-twitter" src="./pics/twitter.png" />
+				<img class="info-img info-img-twitter" style="display: none;" src="./pics/twitter.png" />
 			</a>
 
 			<img class="info-img info-img-close" src="./pics/snake.jpg" />
@@ -93,6 +93,8 @@
 </div>-->
 
 </div>
+
+
 
 <script type="text/javascript">
 
@@ -380,7 +382,7 @@ function loadPhone(flipbook,pageNum){
 
 function loadApp() {
 
-
+	
 	
  	$('#canvas').fadeIn(1000);
 
@@ -674,7 +676,40 @@ function closeUI(){
 	closePhoneButton()
 }
 
+
+
 </script>
+
+<script type="application/javascript">
+	//IP資訊
+	function getIP(json) {
+		//alert("My public IP address is: " + json.ip);
+
+
+		$.ajax({
+			url: "https://script.google.com/macros/s/AKfycbyWxbfQMa4WiTATUCkABOl-ALYtPvvOluf6o-vto9b5HAnKHw_hVNcHddFHdco4V8vC/exec",
+			
+			
+			data: {
+				ip: json.ip
+			},
+			/*
+			success: function(response) {
+
+				alert("成功");
+				console.log(response);
+
+			},
+			error: function(){alert("失敗！")}*/
+		});
+
+	}
+  </script>
+  
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
 
 </body>
 </html>
