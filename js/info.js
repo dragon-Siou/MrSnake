@@ -26,6 +26,7 @@ $(function(){
 
 function openInfo(){    
 
+
     //關掉自己
     $("#info-head").css("display", "none")
 
@@ -57,5 +58,7 @@ function setInfoPhone(){
 
     //把圖片放大
     $(".info-img").addClass("phone-info-img").removeClass("info-img")
+
+    
 
 }
