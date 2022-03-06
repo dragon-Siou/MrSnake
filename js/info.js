@@ -55,4 +55,7 @@ function setInfoPhone(){
     $(".info-img-fb").removeClass("info-img-fb").addClass("phone-info-img-fb")
     $(".info-img-twitter").removeClass("info-img-twitter").addClass("phone-info-img-twitter")
 
+    //把圖片放大
+    $(".info-img").addClass("phone-info-img").removeClass("info-img")
+
 }

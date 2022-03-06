@@ -43,6 +43,17 @@
     
 }
 
+.phone-info-img{
+    
+    border-radius: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    
+    
+}
+
 .info-img-hover{
     filter:brightness(70%);
 }
