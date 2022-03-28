@@ -4,6 +4,7 @@
 <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
 <head>
 <title>初次見面蛇先生</title>
 <meta name="viewport" content="width = 1050, user-scalable = no" />
@@ -12,33 +13,47 @@
 <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="lib/hash.js"></script>
 
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
 </head>
 <body>
-<div class="info-box">
-	
-</div>
 
 <div id="canvas">
 
 <!--<div class="zoom-icon zoom-icon-in"></div>-->
 
-
 <div class="magazine-viewport">
+	<div class="background-box">
+		<img class="desk" src="./pics/wbbg.png"/>
+		<img class="object menu" src="./pics/menuBG-s.png"/>
+		<!--
+		<img class="desk" src="./pics/bg.png"/>
+		
+		<img class="object magnifier" src="./pics/magnifier.png"/>
+		
+		<img class="object author" src="./pics/author.png"/>
+		<img class="object tablet" src="./pics/tablet.png"/>
+		<img class="object whiteboard" src="./pics/whiteboard.png"/>-->
+
+	</div>
 	<div class="container">
 		
 
 		<div class="magazine">
-			<!-- Next button -->
-			<div ignore="1" class="next-button"></div>
-			<!-- Previous button -->
-			<div ignore="1" class="previous-button"></div>
+			<!-- Next button 
+			<div ignore="1" class="next-button"></div>-->
+			<!-- Previous button 
+			<div ignore="1" class="previous-button"></div>-->
 		</div>
-
+		<!--
 		<div id="info-head" class="info-box">
 			<img class="info-img info-img-head" src="./pics/snake.jpg" />
 		</div>
 		
-
+		
 		<div id="info-link" class="info-box" style="display: none;">
 			<a href="https://www.facebook.com/profile.php?id=100006302976928" target="_blank">
 				<img class="info-img info-img-fb" src="./pics/fb.png" />
@@ -58,13 +73,121 @@
 			<button class="chapter-button-3">第三章</button>
 			<button class="chapter-button-4">第四章</button>
 			<button class="chapter-button-5">第五章</button>
-		</div>
+		</div>-->
 
 		<div class="phone-button-box">
 			<button class="phone-button-next">下一頁</button>
 			<button class="phone-button-previous">上一頁</button>
 		</div>
+	
+	
 	</div>
+	
+	<div id="menu-lightbox" class="lightbox lightbox-hide lightbox-menu">
+		
+		<!--<img src="./pics/paper-lightbox.png"/>
+
+		<img src="./pics/close.png" class="menu-button-close" />-->
+
+		<div class="menu-box">
+			<!---->
+			<button id="episode-0" class="menu-button"> 第零話 </button>
+			<button id="episode-1" class="menu-button"> 第一話 </button>
+			<button id="episode-2" class="menu-button"> 第二話 </button>
+			<button id="episode-3" class="menu-button"> 第三話 </button>
+			<button id="episode-4" class="menu-button"> 第四話 </button>
+			<button id="episode-5" class="menu-button"> 第五話 </button>
+			<button id="episode-6" class="menu-button"> 第六話 </button>
+
+			<button id="chapter-button" class="menu-button"> 章節介紹 </button>
+			<button id="author-button" class="menu-button"> 作者介紹 </button>
+			<button id="introduction-button" class="menu-button"> 簡介 </button>
+			<button id="character-button" class="menu-button"> 人物介紹 </button>
+			<button id="menu-close" class="menu-button"> 關閉 </button>
+
+		</div>
+
+	</div>
+
+	<div id="author-lightbox" class="lightbox lightbox-hide lightbox-author">
+
+	</div>
+
+	<div id="whiteboard-lightbox" class="lightbox lightbox-hide lightbox-whiteboard">
+		<div class="whiteboard-box">
+			<div class="character-box character-snake character-big">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					土歧 慎吾
+				</div>
+			</div>
+
+			<div class="character-box character-police character-big">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					木下 律
+				</div>
+			</div>
+
+			<div class="character-box character-killer character-big">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					陸奧 名越
+				</div>
+			</div>
+
+			<div class="character-box character-uncle character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					武田 太一
+				</div>
+			</div>
+
+			<div class="character-box character-yandere character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					井上 千秋
+				</div>
+			</div>
+
+			<div class="character-box character-lizard character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					弘前 翔太
+				</div>
+			</div>
+
+			<div class="character-box character-shopkeeper character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name">
+					佐藤 彩香
+				</div>
+			</div>
+
+			<div class="character-box character-kids character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					伊織&悠斗
+				</div>
+			</div>
+
+			<div class="character-box character-black character-small">
+				<img class="character-img" src="./pics/snake.jpg"/>
+				<div class="character-name ">
+					?
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="seal-lightbox" class="lightbox lightbox-hide lightbox-seal"> 
+		<img id="seal3" class="seal seal-3" src="./pics/seal03.png" />
+		<img id="seal2" class="seal seal-2" src="./pics/seal02.png" />
+		<img id="seal1" class="seal seal-1" src="./pics/seal01.png" />
+	</div>
+
 </div>
 
 <!-- Thumbnails -->
@@ -101,6 +224,8 @@
 
 let pagePath = 'pages/';
 
+let canFlip = true;
+
 function check() {
 
 	let userAgentInfo=navigator.userAgent;
@@ -128,15 +253,19 @@ function check() {
 function loadPC(flipbook,pageNum){
 	// Create the flipbook
 
+	let heightNum = 1.39
+
+	let h = 622
+
 	flipbook.turn({
 			
 			// Magazine width
 
-			width: 922,
+			width: h*heightNum,
 
 			// Magazine height
 
-			height: 662,
+			height: h,
 
 			// Duration in millisecond
 
@@ -223,7 +352,7 @@ function loadPC(flipbook,pageNum){
 
 	//刷條設定
 		// Events for the next button
-
+/*
 		$('.next-button').bind($.mouseEvents.over, function() {
 		
 		$(this).addClass('next-button-hover');
@@ -269,7 +398,7 @@ function loadPC(flipbook,pageNum){
 		$('.magazine').turn('next');
 
 	});
-
+*/
 }
 
 function loadPhone(flipbook,pageNum){
@@ -382,7 +511,7 @@ function loadPhone(flipbook,pageNum){
 
 function loadApp() {
 
-	
+	//alert(window.innerHeight + " " + window.innerWidth)
 	
  	$('#canvas').fadeIn(1000);
 
@@ -395,7 +524,7 @@ function loadApp() {
 		return;
 	}
 	
-	let pageNum = 133;
+	let pageNum = 154;
 
 	//判斷是電腦還是手機
 	//電腦
@@ -482,11 +611,12 @@ function loadApp() {
 
 	// Zoom event
 
+	/*
 	if ($.isTouch)
 		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
 	else
 		$('.magazine-viewport').bind('zoom.tap', zoomTo);
-
+*/
 
 	// Using arrow keys to turn the page
 
@@ -545,7 +675,7 @@ function loadApp() {
 	});
 
 	// Events for thumbnails
-
+	/*
 	$('.thumbnails').click(function(event) {
 		
 		var page;
@@ -566,7 +696,7 @@ function loadApp() {
 			$(this).removeClass('thumb-hover');
 
 		});
-
+*/
 	if ($.isTouch) {
 	
 		$('.thumbnails').
@@ -595,7 +725,7 @@ function loadApp() {
 
 
 	// Regions
-
+	
 	if ($.isTouch) {
 		$('.magazine').bind('touchstart', regionClick);
 	} else {
@@ -613,11 +743,45 @@ function loadApp() {
 
 	$('.magazine').addClass('animated');
 
+	//翻頁
+	$(".magazine-viewport")
+	.click(function(event){
+
+		//alert("magazine-viewport click")
+
+		let e = event || window.event;
+		
+		//右邊
+		if(e.clientX > window.innerWidth/2){
+			if(canFlip){
+				console.log("main canFlip: " + canFlip )
+				$('.magazine').turn('previous');
+			}
+			else{
+				canFlip = true;
+			}
+			
+		}
+		//左邊
+		else{
+			if(canFlip){
+				console.log("main canFlip: " + canFlip )
+				$('.magazine').turn('next');
+			}
+			else{
+				canFlip = true;
+			}
+			
+		}
+
+		
+	})
+
 }
 
 
 // Zoom icon
-
+/*
  $('.zoom-icon').bind('mouseover', function() { 
  	
  	if ($(this).hasClass('zoom-icon-in'))
@@ -649,6 +813,7 @@ function loadApp() {
 		
 
  });
+ */
 
  $('#canvas').hide();
 
@@ -660,7 +825,8 @@ yepnope({
 	yep: ['lib/turn.js'],
 	nope: ['lib/turn.html4.min.js'],
 	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'css/info.css', 'js/info.js'
-		,'js/chapter.js' , 'css/chapter.css', 'js/phoneButton.js', 'css/phoneButton.css'],
+		,'js/chapter.js' , 'css/chapter.css', 'js/phoneButton.js', 'css/phoneButton.css'
+		, 'css/background.css', 'js/background.js', 'css/lightbox.css'],
 	complete: loadApp
 });
 
@@ -678,7 +844,9 @@ function closeUI(){
 
 function getPageFileExtension(page){
 	
-
+	if(page==1){
+		return ".gif";
+	}
 	return ".png";
 }
 

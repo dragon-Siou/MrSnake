@@ -79,7 +79,7 @@ function zoomTo(event) {
 // Load regions
 
 function loadRegions(page, element) {
-
+	
 	$.getJSON(pagePath+page+'-regions.json').
 		done(function(data) {
 
@@ -128,6 +128,8 @@ function regionClick(event) {
 		return processRegion(region, regionType);
 
 	}
+
+	
 
 }
 

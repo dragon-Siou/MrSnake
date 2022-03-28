@@ -1,0 +1,237 @@
+.background-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.desk{
+    position: absolute;
+}
+
+.object{
+    position: absolute;
+}
+
+.object-hover{
+    filter:brightness(70%);
+}
+
+.big{
+    transform: scale(1.5);
+    transition: 1s ease-in-out;
+    transform-origin: 50% 50% ;
+}
+
+.normal{
+    transform: scale(1);
+    transition: 1s ease-in-out;
+    transform-origin: 50% 50% ;
+}
+
+/***********放大鏡***********/
+
+.magnifier{
+    clip-path: polygon(73% 0, 90% 9%, 100% 30%, 98% 58%, 76% 80%, 0 100%, 0 72%, 53% 0);
+    top: 45vh;
+}
+
+/***********菜單***********/
+
+.menu{
+    /*clip-path: polygon(0 28%, 0 0, 100% 0, 75% 43%, 45% 100%, 0 72%);*/
+    transform:rotate(-10deg);
+    top:-635px;
+    left: -321px;
+
+}
+
+.menu-open{
+    animation-duration: 0.5s;
+    animation-name: menu-open;
+    display: none;
+}
+
+
+
+@keyframes menu-open{
+    from{
+        opacity: 1;
+        transform: translate3d(-100%, -100%, 0) rotate(45deg);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(-10deg);
+    }
+}
+
+.menu-close{
+    animation-duration: 1s;
+    animation-name: menu-close;
+
+}
+
+@keyframes menu-close{
+    0%{
+        transform: translate3d(50%, -100%, 0) rotate(45deg);
+    }
+    50%{
+        transform: translate3d(50%, -100%, 0) rotate(45deg);
+
+    }
+    100%{
+        
+        transform: translate3d(0, 0, 0) rotate(-10deg);
+    }
+}
+
+/***********作者***********/
+
+.author{
+    right: 0vw;
+    bottom: 0vh;
+    clip-path: polygon(56% 5%, 79% 13%, 100% 18%, 100% 100%, 0 100%, 29% 0);
+}
+
+
+.author-open{
+    animation-duration: 0.5s;
+    animation-name: author-open;
+    display: none;
+}
+
+
+
+@keyframes author-open{
+    from{
+        opacity: 1;
+        transform: translate3d(-100%, -100%, 0) rotate(45deg);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(6deg);
+    }
+}
+
+.author-close{
+    animation-duration: 1s;
+    animation-name: author-close;
+
+}
+
+@keyframes author-close{
+    0%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+    }
+    50%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+
+    }
+    100%{
+        
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+/***********平板***********/
+
+.tablet{
+    clip-path: polygon(21% 26%, 56% 5%, 69% 0, 100% 100%, 0 100%, 0 43%);
+    left: 0vw;
+    bottom: 0vh;
+}
+
+.tablet-open{
+    animation-duration: 0.5s;
+    animation-name: tablet-open;
+    display: none;
+}
+
+
+
+@keyframes tablet-open{
+    from{
+        opacity: 1;
+        transform: translate3d(-100%, -100%, 0) rotate(45deg);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(6deg);
+    }
+}
+
+.tablet-close{
+    animation-duration: 1s;
+    animation-name: tablet-close;
+
+}
+
+@keyframes tablet-close{
+    0%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+    }
+    50%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+
+    }
+    100%{
+        
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+/***********線索白板***********/
+
+
+.whiteboard{
+    clip-path: polygon(43% 3%, 100% 0, 100% 96%, 75% 100%, 14% 100%, 0 13%);
+    right: 0vw;
+    top: 9vh;
+}
+
+.whiteboard-open{
+    animation-duration: 0.5s;
+    animation-name: whiteboard-open;
+    display: none;
+}
+
+
+
+@keyframes whiteboard-open{
+    from{
+        opacity: 1;
+        transform: translate3d(-100%, -100%, 0) rotate(45deg);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(6deg);
+    }
+}
+
+.whiteboard-close{
+    animation-duration: 1s;
+    animation-name: whiteboard-close;
+
+}
+
+@keyframes whiteboard-close{
+    0%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+    }
+    50%{
+        transform: translate3d(150%, 50%, 0) rotate(45deg);
+
+    }
+    100%{
+        
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+
+/***********封條***********/
+
+
