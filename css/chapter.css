@@ -1,59 +1,62 @@
 
-.chapter-box{
+.menu-page{
     position: absolute;
-    width: 100px;
-    height: 600px;
-
-    left: -90%;
-    top: -20%;
-
-}
-
-.chapter-button-head{
-    position: absolute;
-    
-    top: 0%;
-    left: -95%;
-}
-
-.chapter-button-0{
-    position: absolute;
-    
-    top: 10%;
-    left: -95%;
-}
-
-.chapter-button-1{
-    position: absolute;
-    
-    top: 20%;
-    left: -95%;
-}
-
-.chapter-button-2{
-    position: absolute;
-    
-    top: 30%;
-    left: -95%;
-}
-
-.chapter-button-3{
-    position: absolute;
-    
-    top: 40%;
-    left: -95%;
-}
-
-.chapter-button-4{
-    position: absolute;
-    
+    width: 400px;
+    height: 565px;
     top: 50%;
-    left: -95%;
+    transform: translate(-50%,-50%);
 }
 
-.chapter-button-5{
-    position: absolute;
-    
-    top: 60%;
-    left: -95%;
+/********頁數**********/
+
+.menu-page-0{
+    left: 85%;
+    z-index: 308;
 }
+
+
+.menu-page-1{
+    left: 75%;
+    z-index: 307;
+}
+
+.menu-page-2{
+    left: 65%;
+    z-index: 306;
+}
+
+.menu-page-3{
+    left: 55%;
+    z-index: 305;
+}
+
+/*中間*/
+
+.menu-page-4{
+    left: 45%;
+    z-index: 304;
+}
+
+.menu-page-5{
+    left: 35%;
+    z-index: 303;
+}
+
+.menu-page-6{
+    left: 25%;
+    z-index: 302;
+}
+
+.menu-page-7{
+    left: 15%;
+    z-index: 301;
+}
+
+
+
+/*********未選擇***********/
+.menu-page-black{
+    filter: brightness(70%);
+}
+
+

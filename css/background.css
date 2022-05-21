@@ -31,17 +31,20 @@
 /***********放大鏡***********/
 
 .magnifier{
-    clip-path: polygon(73% 0, 90% 9%, 100% 30%, 98% 58%, 76% 80%, 0 100%, 0 72%, 53% 0);
-    top: 45vh;
+    /*clip-path: polygon(73% 0, 90% 9%, 100% 30%, 98% 58%, 76% 80%, 0 100%, 0 72%, 53% 0);*/
+    top: 67vh;
+    left: 73vw;
+    z-index: 200;
+
 }
 
 /***********菜單***********/
 
 .menu{
     /*clip-path: polygon(0 28%, 0 0, 100% 0, 75% 43%, 45% 100%, 0 72%);*/
-    transform:rotate(-10deg);
-    top:-635px;
-    left: -321px;
+    transform:rotate(24deg);
+    top:-142px;
+    left: -560px;
 
 }
 
@@ -61,7 +64,7 @@
     }
     to{
         opacity: 0;
-        transform: translate3d(0, 0, 0) rotate(-10deg);
+        transform: translate3d(0, 0, 0) rotate(24deg);
     }
 }
 
@@ -81,16 +84,16 @@
     }
     100%{
         
-        transform: translate3d(0, 0, 0) rotate(-10deg);
+        transform: translate3d(0, 0, 0) rotate(24deg);
     }
 }
 
 /***********作者***********/
 
 .author{
-    right: 0vw;
-    bottom: 0vh;
-    clip-path: polygon(56% 5%, 79% 13%, 100% 18%, 100% 100%, 0 100%, 29% 0);
+    right: -22vw;
+    bottom: -27vh;
+    /*clip-path: polygon(56% 5%, 79% 13%, 100% 18%, 100% 100%, 0 100%, 29% 0);*/
 }
 
 
@@ -137,15 +140,17 @@
 /***********平板***********/
 
 .tablet{
-    clip-path: polygon(21% 26%, 56% 5%, 69% 0, 100% 100%, 0 100%, 0 43%);
-    left: 0vw;
-    bottom: 0vh;
+    /*clip-path: polygon(21% 26%, 56% 5%, 69% 0, 100% 100%, 0 100%, 0 43%);*/
+    left: -316px;
+    bottom: -604px;
+    transform:rotate(68deg);
 }
 
 .tablet-open{
     animation-duration: 0.5s;
     animation-name: tablet-open;
     display: none;
+    animation-fill-mode: forwards;
 }
 
 
@@ -153,32 +158,32 @@
 @keyframes tablet-open{
     from{
         opacity: 1;
-        transform: translate3d(-100%, -100%, 0) rotate(45deg);
+        transform: translate3d(-100%, -100%, 0) rotate(180deg);
 
     }
     to{
         opacity: 0;
-        transform: translate3d(0, 0, 0) rotate(6deg);
+        transform: translate3d(0, 0, 0) rotate(336deg);
     }
 }
 
 .tablet-close{
     animation-duration: 1s;
     animation-name: tablet-close;
-
+    animation-fill-mode: forwards;
 }
 
 @keyframes tablet-close{
     0%{
-        transform: translate3d(150%, 50%, 0) rotate(45deg);
+        transform: translate3d(150%, 50%, 0) rotate(360deg);
     }
     50%{
-        transform: translate3d(150%, 50%, 0) rotate(45deg);
+        transform: translate3d(150%, 50%, 0) rotate(360deg);
 
     }
     100%{
         
-        transform: translate3d(0, 0, 0) rotate(0deg);
+        transform: translate3d(0, 0, 0) rotate(336deg);
     }
 }
 
@@ -186,8 +191,8 @@
 
 
 .whiteboard{
-    clip-path: polygon(43% 3%, 100% 0, 100% 96%, 75% 100%, 14% 100%, 0 13%);
-    right: 0vw;
+    /*clip-path: polygon(43% 3%, 100% 0, 100% 96%, 75% 100%, 14% 100%, 0 13%);*/
+    right: 8vw;
     top: 9vh;
 }
 
@@ -219,15 +224,19 @@
 
 @keyframes whiteboard-close{
     0%{
-        transform: translate3d(150%, 50%, 0) rotate(45deg);
+        transform: translate3d(-150%, 0, 0) ;
+        opacity: 0;
+
     }
     50%{
-        transform: translate3d(150%, 50%, 0) rotate(45deg);
+        transform: translate3d(-150%, 0, 0) ;
+        opacity: 0;
 
     }
     100%{
         
-        transform: translate3d(0, 0, 0) rotate(0deg);
+        transform: translate3d(0, 0, 0) ;
+        opacity: 1;
     }
 }
 

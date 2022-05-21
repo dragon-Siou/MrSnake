@@ -29,14 +29,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 	<div class="background-box">
 		<img class="desk" src="./pics/wbbg.png"/>
 		<img class="object menu" src="./pics/menuBG-s.png"/>
+
+		<img class="object magnifier" src="./pics/Zoom2.png"/>
+		
+		<img class="object author" src="./pics/Plate.png"/>
+		<img class="object tablet" src="./pics/Tablet_Off.png"/>
+		<img class="object whiteboard" src="./pics/Arrow_right.png"/>
 		<!--
 		<img class="desk" src="./pics/bg.png"/>
 		
-		<img class="object magnifier" src="./pics/magnifier.png"/>
-		
-		<img class="object author" src="./pics/author.png"/>
-		<img class="object tablet" src="./pics/tablet.png"/>
-		<img class="object whiteboard" src="./pics/whiteboard.png"/>-->
+		-->
 
 	</div>
 	<div class="container">
@@ -90,21 +92,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		<img src="./pics/close.png" class="menu-button-close" />-->
 
 		<div class="menu-box">
-			<!---->
-			<button id="episode-0" class="menu-button"> 第零話 </button>
-			<button id="episode-1" class="menu-button"> 第一話 </button>
-			<button id="episode-2" class="menu-button"> 第二話 </button>
-			<button id="episode-3" class="menu-button"> 第三話 </button>
-			<button id="episode-4" class="menu-button"> 第四話 </button>
-			<button id="episode-5" class="menu-button"> 第五話 </button>
-			<button id="episode-6" class="menu-button"> 第六話 </button>
 
-			<button id="chapter-button" class="menu-button"> 章節介紹 </button>
-			<button id="author-button" class="menu-button"> 作者介紹 </button>
-			<button id="introduction-button" class="menu-button"> 簡介 </button>
-			<button id="character-button" class="menu-button"> 人物介紹 </button>
-			<button id="menu-close" class="menu-button"> 關閉 </button>
+			<img id="episode-0" class="menu-page menu-page-0" src="./chapterPages/head-0.png"/>
+			<img id="episode-1" class="menu-page menu-page-1" src="./chapterPages/head-1.png"/>
+			<img id="episode-2" class="menu-page menu-page-2" src="./chapterPages/head-2.png"/>
+			<img id="episode-3" class="menu-page menu-page-3" src="./chapterPages/head-3.png"/>
+			<img id="episode-4" class="menu-page menu-page-4" src="./chapterPages/head-4.png"/>
+			<img id="episode-5" class="menu-page menu-page-5" src="./chapterPages/head-5.png"/>
+			<img id="episode-6" class="menu-page menu-page-6" src="./chapterPages/head-6.png"/>
+			<img id="episode-7" class="menu-page menu-page-7" src="./chapterPages/head-7.png"/>
+		
+		
+			<img id="menu-close" class="menu-button-close" src="./pics/Return_Menu.png"> 
 
+		</div>
+
+	</div>
+
+	<div id="tablet-lightbox" class="lightbox lightbox-hide lightbox-tablet">
+		
+		<div  class="tablet-button-box">
+			<img class="tablet-button-introduction" src="./pics/Introduction.png" >
+			<img class="tablet-button-trailer" src="./pics/Trailer.png" >
+			<img class="tablet-button-return" src="./pics/Return_Tablet.png" >
+		</div>
+
+		<div class="tablet-introduction-box">
+			<img class="tablet-introduction-title" src="./pics/Tablet_Introduction_Title.png" >
+			<img class="tablet-introduction-content" src="./pics/Tablet_Introduction_Content.png" >
+			<img class="tablet-introduction-back" src="./pics/Arrow_Left.png" >
+		</div>
+
+		<div class="tablet-trailer-box">
+			<img class="tablet-trailer-title" src="./pics/Trailer.png" >
+			<video controls class="tablet-trailer-content" src="./video/title.mp4"  >
+			<img class="tablet-trailer-back" src="./pics/Arrow_Left.png" >
 		</div>
 
 	</div>
@@ -113,7 +135,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 	</div>
 
+
+
 	<div id="whiteboard-lightbox" class="lightbox lightbox-hide lightbox-whiteboard">
+
+	<!--
 		<div class="whiteboard-box">
 			<div class="character-box character-snake character-big">
 				<img class="character-img" src="./pics/snake.jpg"/>
@@ -179,7 +205,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 			</div>
 
 			
+		</div>-->
+		
+		<div class="whiteboard-background"></div>
+		
+		<div id="TV" class="whiteboard-TV lightbox-TV-default lightbox-TV-switch-off">
+			<img id="TV-text" src="./pics/TV_Text.png" class="whiteboard-text whiteboard-text-off">
+			<img src="./pics/Arrow_Left.png" class="whiteboard-back">
+
+			<img id="TV-switch" src="./pics/TV_Switch.png" class="whiteboard-switch-button">
+
 		</div>
+
+		
+
 	</div>
 
 	<div id="seal-lightbox" class="lightbox lightbox-hide lightbox-seal"> 
@@ -513,6 +552,8 @@ function loadApp() {
 
 	//alert(window.innerHeight + " " + window.innerWidth)
 	
+	
+
  	$('#canvas').fadeIn(1000);
 
  	var flipbook = $('.magazine');
@@ -524,7 +565,7 @@ function loadApp() {
 		return;
 	}
 	
-	let pageNum = 154;
+	let pageNum = 201;
 
 	//判斷是電腦還是手機
 	//電腦
@@ -826,7 +867,15 @@ yepnope({
 	nope: ['lib/turn.html4.min.js'],
 	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'css/info.css', 'js/info.js'
 		,'js/chapter.js' , 'css/chapter.css', 'js/phoneButton.js', 'css/phoneButton.css'
-		, 'css/background.css', 'js/background.js', 'css/lightbox.css'],
+		, 'css/background.css', 'js/background.js', 
+
+		//lightbox
+		'css/lightbox/lightbox.css'
+		,'css/lightbox/authorLightbox.css'
+		,'css/lightbox/menuLightbox.css'
+		,'css/lightbox/sealLightbox.css'
+		,'css/lightbox/tabletLightbox.css'
+		,'css/lightbox/whiteboardLightbox.css'],
 	complete: loadApp
 });
 

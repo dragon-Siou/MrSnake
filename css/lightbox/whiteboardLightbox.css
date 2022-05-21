@@ -1,0 +1,293 @@
+/***********線索白板***********/
+.lightbox-whiteboard{
+    width: 1247px;
+    height: 712px;
+    
+    background-image: url("../../pics/whiteboard-lightbox.png");
+}
+
+
+.lightbox-whiteboard-open{
+    animation-duration: 0.5s;
+    animation-name: lightbox-whiteboard-open;
+    transform: rotate(0deg);
+    z-index: 150;
+}
+
+@keyframes lightbox-whiteboard-open{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+       
+    }
+}
+
+.lightbox-whiteboard-close{
+    animation-duration: 0.5s;
+    animation-name: lightbox-whiteboard-close;
+    z-index: -1;
+    opacity: 0;
+    /*
+    transform: rotate(6deg);
+    transform: rotate(10deg);
+    width: 100px;
+    height: 50px;
+    outline: 2px dashed;*/
+}
+
+@keyframes lightbox-whiteboard-close{
+    from{
+        opacity: 1;
+       
+        z-index: 1000;/*transform: translate3d(0, 0, 0) rotate(0deg); */
+    }
+    to{
+        opacity: 0;
+       
+        z-index: -1; /*transform: translate3d(0, 200%, 0) rotate(45deg);*/
+
+    }
+}
+
+/*線索白板 黑幕*/
+.whiteboard-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1920px;
+    height: 1080px;
+    background-image: url("../../pics/TV_Background.png");
+}
+
+
+/***********線索白板-人物***********/
+.whiteboard-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.character-box{
+    position: absolute;
+    width: auto;
+    height: auto;
+
+    transform-origin: 50% 50% ;
+
+}
+
+.character-box:hover{
+    filter:brightness(70%);
+}
+
+.character-img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.character-name{
+    border-radius: 10px;
+    height: 20px;
+    text-align:center;
+    line-height:20px;
+
+    background-color:rgb(39, 39, 39);
+    color: white;
+    font-size: 12px;
+}
+
+/***********線索白板-電視***********/
+.whiteboard-TV{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1433px;
+    height: 901px;
+    
+}
+
+
+
+.lightbox-TV-default{
+    opacity: 0;
+}
+
+.lightbox-TV-switch-off{
+    background-image: url("../../pics/TV_Off.png");
+}
+
+.lightbox-TV-switch-on{
+    background-image: url("../../pics/TV_Caution.png");
+}
+
+.lightbox-TV-relations{
+    background-image: url("../../pics/TV_Relations.png");
+}
+
+.lightbox-TV-open{
+    animation-duration: 1s;
+    animation-name: lightbox-TV-open;
+    z-index: 150;
+    opacity: 1;
+}
+
+@keyframes lightbox-TV-open{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+       
+    }
+}
+
+/***********線索白板-角色位移 縮放***********/
+.character-big{
+    transform: scale(1.5);
+}
+
+.character-small{
+    transform: scale(1.2);
+}
+
+.character-snake{
+
+    top: 45%;
+    left: 48%;
+    
+}
+
+.character-killer{
+
+    top: 30%;
+    left: 75%;
+    
+}
+
+.character-police{
+
+    top: 15%;
+    left: 35%;
+
+}
+
+.character-lizard{
+
+    top: 70%;
+    left: 40%;
+}
+
+.character-uncle{
+
+    top: 30%;
+    left: 25%;
+}
+
+
+.character-black{
+
+    top: 15%;
+    left: 65%;
+}
+
+.character-shopkeeper{
+
+    top: 70%;
+    left: 60%;
+}
+
+.character-kids{
+
+    top: 70%;
+    left: 70%;
+}
+
+.character-yandere{
+    top: 70%;
+    left: 30%;
+}
+
+
+/***********線索白板-返回***********/
+.whiteboard-back{
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    z-index: 200;
+}
+
+.whiteboard-back:hover{
+    filter:brightness(70%);
+}
+
+
+
+/***********線索白板-電源***********/
+.whiteboard-switch-button{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    z-index: 200;
+}
+
+.whiteboard-switch-button:hover{
+    filter:brightness(70%);
+}
+
+
+
+/***********線索白板-警告文字***********/
+.whiteboard-text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.whiteboard-text-off{
+    opacity: 0;
+}
+
+
+.lightbox-text-open{
+    animation-duration: 6s;
+    animation-name: lightbox-text-open;
+    z-index: 150;
+    opacity: 1;
+}
+
+@keyframes lightbox-text-open{
+    0%{
+        opacity: 1;
+
+    }
+    20%{
+        opacity: 0;
+       
+    }
+    40%{
+        opacity: 1;
+
+    }
+    60%{
+        opacity: 0;
+       
+    }
+    80%{
+        opacity: 1;
+
+    }
+    100%{
+        opacity: 0;
+       
+    }
+}
+

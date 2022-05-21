@@ -1,0 +1,151 @@
+/***********簡介***********/
+
+.lightbox-tablet{
+    width: 1164px;
+    height: 839px;
+    background-image: url("../../pics/Tablet_Dedault.png");
+}
+
+.lightbox-tablet-open{
+    animation-duration: 0.5s;
+    animation-name: lightbox-tablet-open;
+   
+    z-index: 150;
+    /*
+    transform: rotate(10deg);
+    width: 100px;
+    height: 50px;
+    outline: 2px dashed;*/
+}
+
+@keyframes lightbox-tablet-open{
+    from{
+        /*opacity: 0;*/
+        transform: translate3d(0, 100%, 0);
+        z-index: -1;
+    }
+    to{
+        /*opacity: 1;*/
+        transform: translate3d(0, 0, 0) ;
+        z-index: 1000;
+    }
+}
+
+.lightbox-tablet-close{
+    animation-duration: 0.5s;
+    animation-name: lightbox-tablet-close;
+    z-index: -1;
+
+    /*
+    transform: rotate(6deg);
+    transform: rotate(10deg);
+    width: 100px;
+    height: 50px;
+    outline: 2px dashed;*/
+}
+
+@keyframes lightbox-tablet-close{
+    from{
+        /*opacity: 0;*/
+        transform: translate3d(0, 0, 0) ;
+        z-index: 1000;
+    }
+    to{
+        /*opacity: 1;*/
+        transform: translate3d(0, -200%, 0);
+        z-index: -1;
+
+    }
+}
+
+/*平板按鈕*/
+.tablet-button-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.tablet-button-introduction{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -200px;
+}
+
+.tablet-button-trailer{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0px;
+}
+
+.tablet-button-return{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 200px;
+}
+
+
+/*平板簡介*/
+.tablet-introduction-box{
+    position: absolute;
+    top: 41px;
+    left: 72px;
+    width: 992px;
+    height: 757px;
+
+}
+
+.tablet-introduction-title{
+    position: absolute;
+    top: 18px;
+    left: 45px;
+}
+
+.tablet-introduction-content{
+    position: absolute;
+    top: 135px;
+    left: 11px;
+}
+
+.tablet-introduction-back{
+    position: absolute;
+    top: 674px;
+    left: 17px;
+}
+
+
+/*平板預告片*/
+
+.tablet-trailer-box{
+    position: absolute;
+    top: 41px;
+    left: 72px;
+    width: 992px;
+    height: 757px;
+}
+
+.tablet-trailer-title{
+    position: absolute;
+    top: 18px;
+    left: 45px;
+}
+
+.tablet-trailer-content{
+    position: absolute;
+    top: 135px;
+    left: 11px;
+    width: 1000px;
+    height: 563px;
+}
+
+.tablet-trailer-back{
+    position: absolute;
+    top: 674px;
+    left: 17px;
+}
+
+
+
+
+
